@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <style>
+        body{
+            background_repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body background="{% static 'images/timg.jpg' %}">
+    <div class="text" style=" text-align:center;">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            {% if request.session.user %}
+                <h1 style="color:lightgoldenrodyellow; font-size: 40px"> 你好 {{ request.session.user.username }} </h1>
+                <h1>
+                    <br>
+                    <a href="getInfo" style="color:black">获取数据</a>
+                    <br>
+                    <a href="deleteInfo" style="color:black">删除数据</a>
+                    {% ifequal msg "2" %}
+                        <script type="text/javascript">
+                            alert("数据删除成功")
+                        </script>
+                    {% endifequal %}
+                    <br>
+                    <a href="index2" style="color:black">展示数据</a>
+                    {% ifequal msg "1" %}
+                        <script type="text/javascript">
+                            alert("请先获取数据")
+                        </script>
+                    {% endifequal %}
+                    <br>
+                    <a href="uesrLogout" style="color:black">退出</a>
+                </h1>
+            {% else %}
+                <h1>
+                    <p style="color:lightgoldenrodyellow; font-size: 50px">welcom</p>
+                    <a href="userRegist">
+                        注册
+                    </a>
+                    <a href="userLogin">
+                        登录
+                    </a>
+                </h1>
+            {% endif %}
+    </div>
+</body>
+</html>

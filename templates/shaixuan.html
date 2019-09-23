@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询</title>
+    <style>
+        body{
+            background_repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body background="{% static 'images/timg3.jpg' %}">
+    <div class="text" style=" text-align:center;">
+        <br><br><br><br><br><br><br><br>
+            {% if request.session.user %}
+                <h1 style="color:lightgoldenrodyellow; font-size: 40px"> 你好 {{ request.session.user.username }} </h1>
+                <form action="qu" method="post" target="_blank">
+                     {% csrf_token %}
+                    <p style="color: wheat">房屋区域： 南岗 香坊 松北 道里 道外 江北</p>
+                    <input type="text" name="quname">
+                     <p style="color: wheat">价格范围:  50万以下 50万-100万 100万-150万 150万-200万 200万以上</p>
+                    <input type="text" name="qianname">
+                    <p style="color: wheat">面积范围:  50平米以下 50平米-80平米 80平米-110平米 110平米-140平米 140平米以上</p>
+                    <input type="text" name="mianname">
+                    <p style="color: wheat">户型:  1室1厅1卫 2室1厅1卫 2室2厅1卫 3室1厅1卫 3室2厅1卫 3室2厅2卫</p>
+                    <input type="text" name="typename">
+                    <br>
+                    <p style="color: wheat">房屋楼层:   低层  中层  高层</p>
+                    <input type="text" name="boundname">
+                    <br>
+                    <input type="submit" value="确定">
+                </form>
+            {% else %}
+                <h1>失败</h1>
+            {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>房屋信息展示</title>
+    <style>
+        body{
+            background_repeat:no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body background="{% static 'images/timg2.jpg' %}">
+    <h1 align="center">房屋信息展示</h1>
+    <h1 align="center">房屋总量 {{ msg }}</h1>
+    <table border="1" align="center">
+    <tr>
+        <th>房屋简介</th>
+        <th>房屋区域</th>
+        <th>房屋地址</th>
+        <th>房屋户型</th>
+        <th>房屋面积</th>
+        <th>房屋朝向</th>
+        <th>房屋楼层</th>
+        <th>房屋价格</th>
+    </tr>
+    {% for line in housers %}
+    <tr>
+        <td>{{line.housename}}</td>
+        <td>{{line.houseadd}}</td>
+        <td>{{line.addname}}</td>
+        <td>{{line.housetype}}</td>
+        <td>{{line.housearea}}平米</td>
+        <td>{{line.housebound}}</td>
+        <td>{{line.housefloor}}</td>
+        <td>{{line.price}}万</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>

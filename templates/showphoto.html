@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>图形化信息</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+        <meta HTTP-EQUIV="Expires" CONTENT="0">
+		<!--[if lte IE 8]><script src="{% static 'assets/js/ie/html5shiv.js' %}"></script><![endif]-->
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{% static 'assets/css/ie9.css' %}" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="{% static 'assets/css/ie8.css' %}" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="showphoto"><strong>HOME</strong></a></h1>
+						<nav>
+							<ul>
+								<li><a href="#footer" class="icon fa-info-circle">About</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/add1.png' %}" class="image"><img src="{% static 'images/thumbs/add1.png' %}" alt="" /></a>
+							<h2>房屋区域折线图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/add2.png' %}" class="image"><img src="{% static 'images/thumbs/add2.png' %}" alt="" /></a>
+							<h2>房屋区域柱状图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/add3.png' %}" class="image"><img src="{% static 'images/thumbs/add3.png' %}" alt="" /></a>
+							<h2>房屋区域饼状图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/type1.png' %}" class="image"><img src="{% static 'images/thumbs/type1.png' %}" alt="" /></a>
+							<h2>房屋区户型折线图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/type2.png' %}" class="image"><img src="{% static 'images/thumbs/type2.png' %}" alt="" /></a>
+							<h2>房屋区户型柱状图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/type3.png' %}" class="image"><img src="{% static 'images/thumbs/type3.png' %}" alt="" /></a>
+							<h2>房屋区户型饼状图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/price1.png' %}" class="image"><img src="{% static 'images/thumbs/price1.png' %}" alt="" /></a>
+							<h2>房屋区价格折线图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/price2.png' %}" class="image"><img src="{% static 'images/thumbs/price2.png' %}" alt="" /></a>
+							<h2>房屋区价格柱状图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/price3.png' %}" class="image"><img src="{% static 'images/thumbs/price3.png' %}" alt="" /></a>
+							<h2>房屋区价格饼状图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/area1.png' %}" class="image"><img src="{% static 'images/thumbs/area1.png' %}" alt="" /></a>
+							<h2>房屋区面积折线图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/area2.png' %}" class="image"><img src="{% static 'images/thumbs/area2.png' %}" alt="" /></a>
+							<h2>房屋区面积柱状图</h2>
+						</article>
+						<article class="thumb">
+							<a href="{% static 'images/thumbs/area3.png' %}" class="image"><img src="{% static 'images/thumbs/area3.png' %}" alt="" /></a>
+							<h2>房屋区面积饼状图</h2>
+						</article>
+					</div>
+				<!-- Footer -->
+					<footer id="footer" class="panel">
+						<div class="inner split">
+							<div>
+								<section>
+									<h2>Magna feugiat sed adipiscing</h2>
+									<p>Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum eget quis orci mattis aliquet. Maecenas fringilla et ante at lorem et ipsum. Dolor nulla eu bibendum sapien. Donec non pharetra dui. Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum.</p>
+								</section>
+								<section>
+									<h2>Follow me on ...</h2>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</section>
+							</div>
+							<div>
+								<section>
+									<h2>Get in touch</h2>
+									<form method="post" action="#">
+										<div class="field half first">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="text" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+							</div>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
